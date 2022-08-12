@@ -392,7 +392,7 @@ section {
 }
 
 .container-background.active{
-    background: url(/web_rau_sach/image/banner-bg.webp) no-repeat;
+    background: url(/image/banner-bg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     padding-top:14rem;
@@ -482,7 +482,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(/web_rau_sach/image/banner-bg.webp) no-repeat;
+    background: url(/image/banner-bg.webp) no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 17rem;
