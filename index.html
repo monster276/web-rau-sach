@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web buôn rau</title>
+
+    <!-- CSS Responsive link -->
+    <link rel="stylesheet" href="./css/grid.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <!-- header section starts -->
+    <div class="grid wide">
+        <header class="header">
+            <a href="/index.html" class="logo"> <i class="fas fa-shopping-basket"></i>Rau Sạch</a>
+
+            <nav class="navbar">
+                <a href="#home" class="home-btn">Trang chủ</a>
+                <a href="#features" class="features-btn">Đặc trưng</a>
+                <a href="#products" class="">Sản phẩm</a>
+                <a href="#categories" class="">Danh mục</a>
+                <a href="#review" class="">Đánh giá</a>
+                <a href="#blogs" class="">Blogs</a>
+            </nav>
+
+            <div class="icons">
+                <div class="fas fa-bars" id="menu-btn"></div>
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <div class="fas fa-user" id="login-btn"></div>
+            </div>
+
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="Bạn tìm kiếm sản phẩm gì ...">
+                <a href="#" class="fas fa-search">
+                </a>
+                <div class="search-hint">
+                    <ul class="search-hint-list">
+                        <li class="search-hint-item">
+                            <a href="#" class="search-hint-item-link">
+                                VD: Cam Tươi, Chanh tươi, Táo,...
+                            </a>
+                        </li>
+                </div>
+            </form>
+
+            <!-- modal giỏ hàng start-->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">
+                                Số Lượng
+                            </span>
+                        </div>
+                        <div class="cart-items"></div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">
+                            Đóng
+                        </button>
+                        <button type="button" class="btn btn-primary order">
+                            Thanh Toán
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- modal giỏ hàng end-->
+
+            <div class="shopping-cart">
+            </div>
+
+            <form action="" class="login-form">
+                <h3>Đăng nhập</h3>
+                <input type="email" class="box" placeholder="Email của bạn">
+                <input type="password" class="box" placeholder="Mật khẩu của bạn">
+                <p>Quên mật khẩu? <a href="#">Click vào đây !</a> </p>
+                <p>Chưa có tài khoản? <a href="#" class="register">Đăng kí ngay !</a> </p>
+                <input type="submit" value="Đăng nhập" id="login-btn" class="btn">
+            </form>
+            <form action="" class="register-form">
+                <h3>Đăng Ký</h3>
+                <input type="email" class="box" placeholder="Email của bạn">
+                <input type="password" class="box" placeholder="Mật khẩu của bạn">
+                <input type="password" class="box" placeholder=" Nhập lại Mật khẩu">
+                <input type="submit" value="Đăng ký" id="register-btn" class="btn">
+                <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            </form>
+            <form action="" class="forget-form">
+                <h3>Quên mật khẩu</h3>
+                <input type="email" class="box" placeholder="Email của bạn">
+                <input type="submit" value="gửi mã" id="forget-btn" class="btn">
+                <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            </form>
+            <!-- overlay -->
+            <div class="overlay">
+            </div>
+        </header>
+
+
+    </div>
+    <!-- header section ends -->
+
+    <div class="container-background">
+        <div class="container">
+            <!-- home section starts -->
+            <section class="home" id="home">
+
+                <div class="content">
+                    <h3>Đưa thực phẩm <span>Tươi</span> và <span>Sạch</span> đến tay người tiêu dùng</h3>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, amet soluta distinctio
+                        facere autem expedita!</p>
+                    <a href="#" class="btn">shop now</a>
+                </div>
+
+            </section>
+            <!-- home section ends  -->
+
+            <!-- Features section starts -->
+            <section class="features" id="features">
+                <h1 class="heading"><span>Đặc trưng</span> nổi bật</h1>
+                <div class="grid wide">
+                    <div class="">
+                        <div class="box-container row">
+                            <div class="col l-4 m-4 c-12">
+                                <div class="box ">
+                                    <img src="image/feature-img-1.png" alt="">
+                                    <h3>Thực phẩm tươi sạch</h3>
+                                    <p>đảm bảo sạch toàn bộ chuỗi từ khâu sản xuất đến khâu phân phối!</p>
+                                    <a href="#" class="btn">Đọc thêm</a>
+                                </div>
+                            </div>
+
+                            <div class="col l-4 m-4 c-12">
+                                <div class="box">
+                                    <img src="image/feature-img-2.png" alt="">
+                                    <h3>Giao hàng miễn phí</h3>
+                                    <p>Giao hàng miễn phí, nhanh chóng, tiện lợi, là sự lựa chọn tối ưu cho mọi nhà!</p>
+                                    <a href="#" class="btn">Đọc thêm</a>
+                                </div>
+                            </div>
+
+                            <div class="col l-4 m-4 c-12">
+                                <div class="box">
+                                    <img src="image/feature-img-3.png" alt="">
+                                    <h3>Thanh toán dễ dàng</h3>
+                                    <p>Thanh toán dễ dàng với nhiều hình thức phù hợp với nhu cầu cảu khách hàng !</p>
+                                    <a href="#" class="btn">Đọc thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Features section ends -->
+        </div>
+    </div>
+
+    <!-- products section starts -->
+    <section class="products" id="products">
+        <h1 class="heading"><span>Sản Phẩm</span> bán chạy!</h1>
+        <h3 class="heading">(vuốt sang trái hoặc phải)</h3>
+        <div class="grid wide">
+            <div class="swiper product-slider row">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <img class="prd" src="./image/product-1.png" alt="" />
+                        <h3 class="content-product-h3">Cam tươi</h3>
+                        <div class="price">50.000 VNĐ/kg</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <a class="btncart">Thêm vào giỏ</a>
+                    </div>
+                    <!-- <div class="product-info">
+                                <div class="product-header">
+                                    <h3>Tên sản phẩm:</h3>
+                                    <div class="product-name">Cà Rốt</div>
+                                </div>
+                                <h3>Thông tin sản phẩm:</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, vel.</p>
+                            </div> -->
+
+                    <div class="swiper-slide box">
+                        <img class="prd" src="./image/product-2.png" alt="" />
+                        <h3 class="content-product-h3">Hành tím</h3>
+                        <div class="price">10.000 VNĐ/kg</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <a class="btncart">Thêm vào giỏ</a>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img class="prd" src="./image/product-3.png" alt="" />
+                        <h3 class="content-product-h3">Thăn bò</h3>
+                        <div class="price">250.000 VNĐ/kg</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <a class="btncart">Thêm vào giỏ</a>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img class="prd" src="./image/product-4.png" alt="" />
+                        <h3 class="content-product-h3">Bắp cải</h3>
+                        <div class="price">7.000 VNĐ/kg</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <a class="btncart">Thêm vào giỏ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper product-slider row">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <img class="prd" src="./image/product-5.png" alt="" />
+                        <h3 class="content-product-h3">Khoai tây</h3>
+                        <div class="price">12.000 VNĐ/kg</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <a class="btncart">Thêm vào giỏ</a>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img class="prd" src="./image/product-6.png" alt="" />
+                        <h3 class="content-product-h3">Bơ tươi</h3>
+                        <div class="price">30.000 VNĐ/kg</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <a class="btncart">Thêm vào giỏ</a>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img class="prd" src="./image/product-7.png" alt="" />
+                        <h3 class="content-product-h3">Cà rốt</h3>
+                        <div class="price">12.000 VNĐ/kg</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <a class="btncart">Thêm vào giỏ</a>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img class="prd" src="./image/product-8.png" alt="" />
+                        <h3 class="content-product-h3">Chanh tươi</h3>
+                        <div class="price">7.000 VNĐ/kg</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                        </div>
+                        <a class="btncart">Thêm vào giỏ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- products section ends -->
+
+    <!-- categories section starts  -->
+    <section class="categories" id="categories">
+
+        <h1 class="heading"><span>Danh mục</span> các sản phẩm </h1>
+
+        <div class="grid wide">
+            <div class="box-container row">
+                <div class="col l-3 m-4 c-12">
+                    <div class="box">
+                        <img src="image/cat-1.png" alt="">
+                        <h3>Rau Sạch</h3>
+                        <p>Giảm giá 45%!!</p>
+                        <a href="#" class="btn">Xem ngay!!</a>
+                    </div>
+                </div>
+
+                <div class="col l-3 m-4 c-12">
+                    <div class="box">
+                        <img src="image/cat-2.png" alt="">
+                        <h3>hoa quả tươi</h3>
+                        <p>Giảm giá 45%!!</p>
+                        <a href="#" class="btn">Xem ngay!!</a>
+                    </div>
+                </div>
+
+                <div class="col l-3 m-4 c-12">
+                    <div class="box">
+                        <img src="image/cat-3.png" alt="">
+                        <h3>sản phẩm từ sữa</h3>
+                        <p>Giảm giá 45%!!</p>
+                        <a href="#" class="btn">Xem ngay!!</a>
+                    </div>
+                </div>
+
+                <div class="col l-3 m-4 c-12">
+                    <div class="box">
+                        <img src="image/cat-4.png" alt="">
+                        <h3>Sản phẩm từ Thịt</h3>
+                        <p>Giảm giá 45%!!</p>
+                        <a href="#" class="btn">Xem ngay!!</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- categories section ends -->
+
+    <!-- review section starts  -->
+    <section class="review" id="review">
+
+        <h1 class="heading"><span>Nhận xét</span> của khách hàng</h1>
+        <h3 class="heading">(vuốt sang trái hoặc phải)</h3>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="image/pic-1.png" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est
+                        maxime ad tempore quasi tenetur.</p>
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/pic-2.png" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est
+                        maxime ad tempore quasi tenetur.</p>
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/pic-3.png" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est
+                        maxime ad tempore quasi tenetur.</p>
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/pic-4.png" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est
+                        maxime ad tempore quasi tenetur.</p>
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- review section ends -->
+
+
+    <!-- blogs section starts  -->
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading"><span>bài viết</span> của chúng tôi</h1>
+
+        <div class="grid wide">
+            <div class="box-container row">
+
+                <div class="col l-4 m-6 c-12">
+                    <div class="box">
+                        <img src="image/blog-1.jpg" alt="">
+                        <div class="content">
+                            <div class="icons">
+                                <a href="#"> <i class="fas fa-user"></i>đăng bởi admin </a>
+                                <a href="#"> <i class="fas fa-calendar"></i>1/8/2022</a>
+                            </div>
+                            <h3>Hãy mua thực phẩm sạch</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, expedita.</p>
+                            <a href="#" class="btn">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col l-4 m-6 c-12">
+                    <div class="box">
+                        <img src="image/blog-2.jpg" alt="">
+                        <div class="content">
+                            <div class="icons">
+                                <a href="#"> <i class="fas fa-user"></i>đăng bởi admin </a>
+                                <a href="#"> <i class="fas fa-calendar"></i>1/8/2022</a>
+                            </div>
+                            <h3>Hãy mua thực phẩm sạch</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, expedita.</p>
+                            <a href="#" class="btn">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col l-4 m-6 c-12">
+                    <div class="box">
+                        <img src="image/blog-3.jpg" alt="">
+                        <div class="content">
+                            <div class="icons">
+                                <a href="#"> <i class="fas fa-user"></i>đăng bởi admin </a>
+                                <a href="#"> <i class="fas fa-calendar"></i>1/8/2022</a>
+                            </div>
+                            <h3>Hãy mua thực phẩm sạch</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, expedita.</p>
+                            <a href="#" class="btn">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- blogs section ends -->
+
+
+    <!-- footer section starts  -->
+    <section class="footer">
+
+        <div class="grid wide">
+            <div class="box-container row">
+                <div class="col l-4 m-4 c-12">
+                    <div class="box">
+                        <h3> rau sạch <i class="fas fa-shopping-basket"></i> </h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, saepe.</p>
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col l-4 m-4 c-12">
+                    <div class="box">
+                        <h3>thông tin liên hệ</h3>
+                        <a href="#" class="links"> <i class="fas fa-phone"></i> 0123JQK </a>
+                        <a href="#" class="links"> <i class="fas fa-phone"></i> 0123JQK </a>
+                        <a href="#" class="links"> <i class="fas fa-envelope"></i> FB88@gmail.com </a>
+                        <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Vietnam, hehe - 113 </a>
+                    </div>
+                </div>
+
+                <!-- <div class="col l-4 m-4 c-12">
+                    <div class="box">
+                        <h3>quick links</h3>
+                        <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                        <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+                        <a href="#" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+                        <a href="#" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
+                        <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+                        <a href="#" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+                    </div>
+                </div> -->
+
+                <div class="col l-4 m-4 c-12">
+                    <div class="box">
+                        <h3>Nhận email?</h3>
+                        <p>đăng ký để nhận email mới nhất !!</p>
+                        <input type="email" placeholder="email của bạn..." class="email">
+                        <input type="submit" value="Đăng ký" class="btn">
+                        <img src="image/payment.png" class="payment-img" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="credit"> created by <span> Nhóm 3 </span></div>
+
+    </section>
+    <!-- footer section ends -->
+
+    <!-- js Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- js file link -->
+    <script src="./js/main.js"></script>
+    <script src="./js/db.js"></script>
+
+</body>
+
+</html>
