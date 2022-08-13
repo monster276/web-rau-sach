@@ -45,15 +45,15 @@ function checkInputs() {
 	}
 	
 	if(passwordValue === '') {
-		setErrorFor(password, 'Password không được để trống');
+		setErrorFor(password, 'Mật khẩu không được để trống');
 	} else {
 		setSuccessFor(password);
 	}
 	
 	if(password2Value === '') {
-		setErrorFor(password2, 'Password2 không được để trống');
+		setErrorFor(password2, 'Xác nhận lại mật khẩu');
 	} else if(passwordValue !== password2Value) {
-		setErrorFor(password2, 'Passwords không khớp');
+		setErrorFor(password2, 'Mật khẩu không trùng khớp');
 	} else{
 		setSuccessFor(password2);
 
