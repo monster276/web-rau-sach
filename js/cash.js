@@ -13,7 +13,7 @@ console.log(visa)
 console.log(choice[3].value)
 visa.style.display = "none"
 mobile.style.display = "none"
-bank.style.display="none"
+bank.style.display="block"
 
 choice.onclick = function () {
     for (let i = 0; i <= 3; i++){
