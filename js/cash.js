@@ -42,7 +42,7 @@ choice.onclick = function () {
           default:
               visa.style.display = "none"
               mobile.style.display = "none"
-              bank.style.display="none"
+              bank.style.display="block"
             break;
         
    }  
