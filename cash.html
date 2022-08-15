@@ -56,12 +56,36 @@
           <form action="Submit">
             <label for="cashname">Chọn phương thức thanh toán:</label>
             <select name="cashway" id="cash1">
-              <option value="online">Chuyển khoản internet banking</option>
-              <option value="pay">Ví điện tử</option>
-              <option value="credit">Thẻ tín dụng</option>
-              <option value="home">Thanh toán khi nhận hàng</option>
+              <option class="pay1" value="online">Chuyển khoản internet banking</option>
+              <option class="pay1" value="pay">Ví điện tử</option>
+              <option class="pay1" value="credit">Thẻ tín dụng</option>
+              <option class="pay1" value="home">Thanh toán khi nhận hàng</option>
             </select>
           </form>
+        </div>
+        <div id="credit1">
+          <p >Số thẻ</p>
+          <input class="cardnum" type="text" maxlength="19"> 
+          <p >Tên chủ thẻ</p>
+          <input class="name"type="text">
+          <p >Ngày hết hạn</p>
+          <input class="date" type="text">
+          <p >Số CCV</p>
+          <input class="ccv" type="text">
+        </div>
+        <div class="bank">
+          <p >Số thẻ/Số tài khoản</p>
+          <input class="cardnum" type="text" maxlength="19"> 
+          <p >Tên chủ thẻ</p>
+          <input class="name"type="text">
+          <p >Ngân hàng</p>
+          <input class="date" type="text">
+        </div>
+        <div class="mobile">
+          <p>Chọn ví điện tử</p>
+          <a href="" class="momo"> <img src="./image/momo.png" alt=""> </a>
+          <a href="" class="zalo"><img src="./image/zalo.png" alt=""></a>
+          <a href="" class="vnpay"><img src="./image/vnpay.png" alt=""></a>
         </div>
         <div class="bt">
           <button class="btn" id="submit">Xác nhận</button>

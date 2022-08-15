@@ -1248,6 +1248,73 @@ h5.modal-title {
     /* Black w/ opacity */
 }
 
+
+
+
+
+/* Phương thức thanh toán */
+.mobile{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.mobile img{
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    padding-right: 30px;
+}
+#credit1{
+    width: 450px;
+    height: 370px;
+    margin-left: 250px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+#credit1 .cardnum{
+    width: 400px;
+}
+#credit1 .name {
+    width: 400px;
+}
+#credit1 .date {
+    width: 400px;
+}
+#credit1 .ccv {
+    width: 400px;
+}
+.bank{
+    width: 450px;
+    height: 370px;
+    margin-left: 250px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.bank .cardnum {
+    width: 400px;
+}
+
+.bank .name {
+    width: 400px;
+}
+
+.bank .date {
+    width: 400px;
+}
+
+
+
+
+
+
+/* Phương thức thanh toán */
+
 .cashdili #tong {
     font-size: 20px;
     padding-left: 10px;

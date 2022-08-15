@@ -3,7 +3,52 @@
 
 let modalcash = document.getElementById("myModalcash");
 console.log(modalcash)
-document.querySelector("#tong").value = localStorage.getItem("sumprice")+".000"
+document.querySelector("#tong").value = localStorage.getItem("sumprice") + ".000"
+let choice = document.querySelector("#cash1")
+let mobile = document.querySelector(".mobile")
+let bank=document.querySelector(".bank")
+let visa = document.querySelector("#credit1")
+let pay=document.querySelector(".pay1")
+console.log(visa)
+console.log(choice[3].value)
+visa.style.display = "none"
+mobile.style.display = "none"
+bank.style.display="none"
+
+choice.onclick = function () {
+    for (let i = 0; i <= 3; i++){
+      switch (choice.value) {
+        case "online":
+              visa.style.display = "none"
+              mobile.style.display = "none"
+              bank.style.display="block"
+              break;
+        case "pay":
+              visa.style.display = "none"
+              mobile.style.display = "block"
+              bank.style.display="none"
+              break;
+        case "credit":
+              visa.style.display = "block"
+              mobile.style.display = "none"
+              bank.style.display="none"
+              break; 
+        case "home":
+              visa.style.display = "none"
+              mobile.style.display = "none"
+              bank.style.display="none"
+            break;
+   
+          default:
+              visa.style.display = "none"
+              mobile.style.display = "none"
+              bank.style.display="none"
+            break;
+        
+   }  
+    }
+   
+}
 
 // Get the button that opens the modal
 let btncash = document.getElementById("submit");
