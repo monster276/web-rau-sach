@@ -486,7 +486,7 @@ section {
 }
 
 .container-background.active{
-    background: url(/image/banner-bg.jpg) no-repeat;
+    background: url(/image/banner.webp) no-repeat;
     background-position: center;
     background-size: cover;
     padding-top:14rem;
